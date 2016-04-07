@@ -1,9 +1,10 @@
 describe 'Song Methods' do
   before do
     @song = Song.create(name: "Forever")
+    @drake = Artist.create(name: "Drake")
   end
 
-  after do 
+  after do
     clean_database
   end
 
