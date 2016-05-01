@@ -10,7 +10,7 @@ namespace :db do
     migrate_db
   end
 
-  task :drop => :environment do 
+  task :drop => :environment do
     drop_db
   end
 
@@ -20,5 +20,10 @@ namespace :db do
 end
 
 task :console => :environment do
+
+  def reload!
+    load_all 'app'
+  end
+
   Pry.start
 end
