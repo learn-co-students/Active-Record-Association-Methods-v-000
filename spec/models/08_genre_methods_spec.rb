@@ -15,13 +15,13 @@ describe 'Genre Methods' do
     expect(@genre.song_count).to eq(4)
   end
 
-  it '#artist_count' do
-    expect(@genre.artist_count).to eq(3)
-  end
+  # it '#artist_count' do
+  #   expect(@genre.artist_count).to eq(3)
+  # end
 
-  describe '#all_artist_names' do 
-    it 'returns an array of strings containing every musicians name' do
-      expect(@genre.all_artist_names).to eq(["MJ", "Adele", "James Brown"])
-    end
-  end
+  # describe '#all_artist_names' do
+  #   it 'returns an array of strings containing every musicians name' do
+  #     expect(@genre.all_artist_names).to eq(["MJ", "Adele", "James Brown"])
+  #   end
+  # end
 end
