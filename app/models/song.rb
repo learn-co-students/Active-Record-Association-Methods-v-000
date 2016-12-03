@@ -11,3 +11,5 @@ class Song < ActiveRecord::Base
     # when this method is called it should assign the song's artist to Drake
   end
 end
+
+#SELECT artists.name FROM artists JOIN songs ON artists.id = songs.artist_id JOIN genres ON songs.genre_id = genre.id
