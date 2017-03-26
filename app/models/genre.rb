@@ -2,15 +2,16 @@ class Genre < ActiveRecord::Base
   has_many :songs
   has_many :artists, through: :songs
 
-  def song_count
-    # return the number of songs in a genre
+  def song_count # return the number of songs in a genre
+    self.songs.count
   end
 
-  def artist_count
-    # return the number of artists associated with the genre
+  def artist_count # return the number of artists associated with the genre
+    self.artists.count
   end
 
-  def all_artist_names
-    # return an array of strings containing every musician's name
+  def all_artist_names # return an array of strings containing every musician's name
+    artist_object_array = Genre.all.collect {|artist| artist.artists} #this is all extremely confusing, even in Pry.
+    artist_object_array.flatten.collect {|artist| artist.name}
   end
 end
