@@ -7,10 +7,10 @@ class Genre < ActiveRecord::Base
   end
 
   def artist_count
-    songs.map { |s| s.artist }.uniq.count
+    artists.size
   end
 
   def all_artist_names
-    songs.map { |s| s.artist.name }.uniq
+    artists.map { |a| a.name }
   end
 end
