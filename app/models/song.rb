@@ -9,6 +9,6 @@ class Song < ActiveRecord::Base
   def drake_made_this
     # when this method is called it should assign the song's artist to Drake
     drake = Artist.find_or_create_by(name: "Drake")
-   self.artist = drake
+   self.artist = drake #self.artist = Artist.new(name: "Drake") passes test but not quite right as drake may already exist in the model
   end
 end
