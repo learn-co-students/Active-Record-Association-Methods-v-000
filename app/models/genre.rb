@@ -14,7 +14,8 @@ class Genre < ActiveRecord::Base
 
   def all_artist_names
     # return an array of strings containing every musician's name
-    self.songs.collect {|song| song.artist.name}
-    # is this the best way to do this??
+    # self.songs.collect {|song| song.artist.name}
+    # is this the best way to do this?? no:
+    self.artists.collect {|artist| artist.name}
   end
 end
