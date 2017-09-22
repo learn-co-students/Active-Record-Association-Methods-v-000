@@ -19,6 +19,7 @@ class Artist < ActiveRecord::Base
 
   def genre_count
     #return the number of genres associated with the artist
-    self.songs.map {|song| song.genre.id}.uniq.size
+    self.genres.size #does that take care of uniqness??
+    #self.songs.map {|song| song.genre.id}.uniq.size
   end
 end
