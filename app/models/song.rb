@@ -11,5 +11,8 @@ class Song < ActiveRecord::Base
     Artist.create.tap do |artist|
       artist.name = "Drake"
     end
+    # School solution
+    #    drake = Artist.find_or_create_by(name: "Drake")
+    #    self.artist = drake
   end
 end
