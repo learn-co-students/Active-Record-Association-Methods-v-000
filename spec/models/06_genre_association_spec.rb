@@ -19,5 +19,5 @@ describe 'Genre Associations' do
     @genre.artist_count
     expect(@genre.artists).to include(artist)
   end
-  
+
 end
