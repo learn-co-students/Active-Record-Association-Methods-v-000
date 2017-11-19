@@ -23,6 +23,7 @@ GEM
     json (1.8.3)
     method_source (0.8.2)
     minitest (5.8.4)
+    pg (0.19.0)
     pry (0.10.3)
       coderay (~> 1.1.0)
       method_source (~> 0.8.1)
@@ -64,6 +65,7 @@ PLATFORMS
 DEPENDENCIES
   activerecord
   database_cleaner
+  pg
   pry
   rake
   rspec
@@ -71,4 +73,4 @@ DEPENDENCIES
   sqlite3
 
 BUNDLED WITH
-   1.11.2
+   1.13.6
