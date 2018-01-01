@@ -14,9 +14,12 @@ class Genre < ActiveRecord::Base
     # return the number of artists associated with the genre
   end
 
-  def self.all_artist_names
-    self.artists << artist
-    self.artists.all.where('name = ?')
-       # return an array of strings containing every musician's name
+  def all_artist_names
+    all_artist_names = self.artists.all.collect {|artist| artist.name}
+    all_artist_names
   end
 end
+
+       # return an array of strings containing every musician's name
+       # what is the easiest way to access a visual representation of the database and joins?
+       
