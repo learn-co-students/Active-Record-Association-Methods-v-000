@@ -1,3 +1,4 @@
+require 'pry'
 describe 'Genre Methods' do
   before do
     @genre = Genre.create(name: "Hip Hop")
