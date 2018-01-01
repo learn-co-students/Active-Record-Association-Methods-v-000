@@ -1,3 +1,5 @@
+require 'pry'
+
 class Genre < ActiveRecord::Base
   has_many :songs
   has_many :artists, through: :songs
@@ -12,8 +14,9 @@ class Genre < ActiveRecord::Base
     # return the number of artists associated with the genre
   end
 
-  def all_artist_names
-    Artist.name.all
-    # return an array of strings containing every musician's name
+  def self.all_artist_names
+    self.artists << artist
+    self.artists.all.where('name = ?')
+       # return an array of strings containing every musician's name
   end
 end
