@@ -7,11 +7,11 @@ class Genre < ActiveRecord::Base
   end
 
   def artist_count
-    Genre.joins(:artists).ids.count
+    self.artists.count
   end
 
   def all_artist_names
     # return an array of strings containing every musician's name
-    Artist.pluck(:name)
+    self.artists.pluck(:name)
   end
 end
