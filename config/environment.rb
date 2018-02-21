@@ -10,6 +10,8 @@ Dir[File.join(File.dirname(__FILE__), "../lib/support", "*.rb")].each {|f| requi
 DBRegistry[ENV["PLAYLISTER_ENV"]].connect!
 DB = ActiveRecord::Base.connection
 
+# For some reason the statement int the list didnot remove the "puts" to the console; the one with the logger did.
+ActiveRecord::Base.logger = nil
 if ENV["PLAYLISTER_ENV"] == "test"
   ActiveRecord::Migration.verbose = false
 end
