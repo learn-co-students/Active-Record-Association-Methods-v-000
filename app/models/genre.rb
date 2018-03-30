@@ -17,12 +17,13 @@ class Genre < ActiveRecord::Base
 # creating empty array  _ collecting  that array - passing_in and calling the array
 # recipe for .map or .collect
 
+    contain = self.artists
+    contain.map do |instance_of_artist|
+      instance_of_artist.name
+   end
+  end
 
-contain = self.artists
-contain.map do |instance_of_artist|
-  instance_of_artist.name
-end
-
+   # AN EXTRA WAY OF DOING THE SAME METHOD ON LINE. 15
   #   # return an array of strings containing every musician's name
   #   array_of_names = []
   #   contain = self.artists
