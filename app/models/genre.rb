@@ -1,16 +1,24 @@
+require 'pry'
+
 class Genre < ActiveRecord::Base
   has_many :songs
   has_many :artists, through: :songs
 
   def song_count
-    # return the number of songs in a genre
+    self.songs.size
   end
 
   def artist_count
-    # return the number of artists associated with the genre
+    # binding.pry
+  # song_array = self.songs.all
+  # artists = song_array.each { |s| s.artist}
+  # artists.size
+  self.artists.count
   end
 
   def all_artist_names
-    # return an array of strings containing every musician's name
+    # binding.pry
+  art =  self.artists.all
+  art.collect {|a| a.name}
   end
 end
