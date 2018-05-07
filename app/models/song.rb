@@ -9,5 +9,7 @@ class Song < ActiveRecord::Base
 
   def drake_made_this
     self.build_artist(name: "Drake")
+    # also works => drake = Artist.find_or_create_by(name: "Drake")
+    # self.artist = drake
   end
 end
