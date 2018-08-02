@@ -8,7 +8,6 @@ class Song < ActiveRecord::Base
 
   def drake_made_this
     drake = Artist.find_or_create_by(name: "Drake")
-    drake.nil?
     drake.songs << self
     self.artist
   end
