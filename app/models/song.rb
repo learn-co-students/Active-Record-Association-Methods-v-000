@@ -3,11 +3,10 @@ class Song < ActiveRecord::Base
   belongs_to :genre
 
   def get_genre_name
-    binding.pry
     genre.name
   end
 
   def drake_made_this
-    # binding.pry
+    self.artist = Artist.new(name: "Drake")
   end
 end
