@@ -14,5 +14,8 @@ class Genre < ActiveRecord::Base
     artist_names = []
     self.songs.each {|s| artist_names << s.artist.name }
     artist_names
+
+    # more elegant:
+    # self.artists.collect {|artist| artist.name}
   end
 end
