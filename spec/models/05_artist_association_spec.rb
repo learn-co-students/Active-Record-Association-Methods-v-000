@@ -1,3 +1,5 @@
+require_relative '../spec_helper'
+
 describe 'Artist Associations' do
   before do
     @prince = Artist.create(name: "Prince")
@@ -23,8 +25,8 @@ describe 'Artist Associations' do
   end
 
   it 'can add many songs at the same time' do
-    song_1 = Song.create(:name => "A Song By Prince")    
-    song_2 = Song.create(:name => "A Song By Prince 2")  
+    song_1 = Song.create(:name => "A Song By Prince")
+    song_2 = Song.create(:name => "A Song By Prince 2")
     @prince.songs << [song_1, song_2]
 
     expect(Artist.find_by(name: "Prince").songs.count).to eq(2)
@@ -36,6 +38,7 @@ describe 'Artist Associations' do
     song.genre = genre
     song.save
     @prince.songs << song
+
     expect(@prince.genres).to include(genre)
   end
 

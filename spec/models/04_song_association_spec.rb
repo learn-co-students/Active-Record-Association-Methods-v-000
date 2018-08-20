@@ -1,3 +1,5 @@
+require_relative '../spec_helper'
+
 describe 'Song Associations' do
   before do
     @song = Song.create(name: "Forever")
@@ -29,8 +31,9 @@ describe 'Song Associations' do
   it 'can build genres' do
     genre = @song.build_genre(name: "Rap")
     @song.save
+
     expect(Song.where(name: "Forever").first.genre).to eq(genre)
     expect(Genre.where(name: "Rap").first.songs).to include(@song)
   end
-  
+
 end
