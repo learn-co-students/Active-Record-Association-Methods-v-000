@@ -1,6 +1,14 @@
 class Artist < ActiveRecord::Base
   has_many :songs
   has_many :genres, through: :songs
+  
+  #validate :good_song
+  #
+  #def good_song
+  #  if self.name != "Taylor Swift"
+  #    errors.add(:good_song, "must be made by Taytay")
+  #  end
+  #end
 
   def get_genre_of_first_song
     #return the genre of the artist's first saved song
