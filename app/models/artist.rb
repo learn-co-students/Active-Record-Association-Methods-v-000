@@ -14,6 +14,7 @@ class Artist < ActiveRecord::Base
 
   def genre_count
     #return the number of genres associated with the artist
-    self.songs.count('genre', :distinct => true)
+    gens = self.songs.collect {|s| s.genre}.uniq
+    gens.length
   end
 end
