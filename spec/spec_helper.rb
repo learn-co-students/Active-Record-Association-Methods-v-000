@@ -2,6 +2,8 @@ ENV["PLAYLISTER_ENV"] = "test"
 
 require_relative '../config/environment'
 
+ActiveRecord::Base.logger = nil
+
 RSpec.configure do |config|
   config.order = 'default'
 
