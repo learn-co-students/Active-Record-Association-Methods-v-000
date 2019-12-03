@@ -1,4 +1,4 @@
-# Active Record Association Methods
+# 1 Active Record Association Methods
 
 ## Objectives
 
