@@ -1,4 +1,4 @@
-describe 'Song Methods' do
+puts describe 'Song Methods' do
   before do
     @song = Song.create(name: "Forever")
   end

@@ -1,4 +1,4 @@
-describe 'Artist Methods' do
+puts describe 'Artist Methods' do
   before do
     @prince = Artist.create(name: "Prince")
     song = Song.create(name: "Super Hip Music")

@@ -1,4 +1,4 @@
-describe 'Artist' do
+puts describe 'Artist' do
   before do
     @prince = Artist.create(name: "Prince")
   end
