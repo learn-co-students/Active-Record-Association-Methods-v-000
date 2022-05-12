@@ -30,7 +30,7 @@ GEM
       method_source (~> 0.9.0)
     rack (2.2.3)
       rack
-    rake (12.3.0)
+    rake (12.3.3)
     rspec (3.7.0)
       rspec-core (~> 3.7.0)
       rspec-expectations (~> 3.7.0)
